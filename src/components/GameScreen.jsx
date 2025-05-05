@@ -104,11 +104,8 @@ export default function GameScreen({ onGameOver, onExit }) {
           .filter(Boolean)
 
         if (missedBubbles > 0) {
-          console.log("Missed bubble:", missedBubbles);
-
           setMissedCount((prev) => prev + missedBubbles)
-          // setLives((prev) => prev - missedBubbles)
-          console.log("Lives:", lives);
+          setLives((prev) => prev - missedBubbles)
         }
 
         return updatedBubbles
