@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 export default function Bubble({ bubble, onPop }) {
   return (
     <motion.div
-      className={`absolute rounded-full bg-gradient-to-br ${bubble.colorClass} shadow-lg cursor-pointer`}
+      className={`absolute rounded-full bg-gradient-to-br ${bubble.colorClass} cursor-pointer`}
       style={{
         width: bubble.size,
         height: bubble.size,

@@ -21,7 +21,7 @@ export default function GameScreen({ onGameOver, onExit }) {
     const containerWidth = containerRef.current.offsetWidth
     const containerHeight = containerRef.current.offsetHeight
 
-    const size = Math.floor(Math.random() * 60) + 40 // 40-100px
+    const size = Math.floor(Math.random() * 60) + 50 // 40-100px
     const x = Math.floor(Math.random() * (containerWidth - size))
 
     const colors = [
@@ -42,8 +42,8 @@ export default function GameScreen({ onGameOver, onExit }) {
       y: containerHeight + size,
       size,
       colorClass,
-      speedX: (Math.random() - 0.5) * 1.5,
-      speedY: -Math.random() * 3 - 1, // Upward speed
+      speedX: (Math.random() - 0.5) * 1,
+      speedY: -Math.random() * 1.5 - 0.5, // Upward speed
     }
 
     setBubbles((prevBubbles) => [...prevBubbles, newBubble])
@@ -58,40 +58,41 @@ export default function GameScreen({ onGameOver, onExit }) {
 
   // Update bubble positions
   useEffect(() => {
-    if (!containerRef.current) return
+    let animationFrameId;
 
-    const containerWidth = containerRef.current.offsetWidth
-    const containerHeight = containerRef.current.offsetHeight
+    const updateBubbles = () => {
+      if (!containerRef.current) return;
 
-    const interval = setInterval(() => {
+      const containerWidth = containerRef.current.offsetWidth;
+      const containerHeight = containerRef.current.offsetHeight;
+
       setBubbles((prevBubbles) => {
-        let missedBubbles = 0
+        let missedBubbles = 0;
 
         const updatedBubbles = prevBubbles
           .map((bubble) => {
-            const newX = bubble.x + bubble.speedX
-            const newY = bubble.y + bubble.speedY
-            let newSpeedX = bubble.speedX
-            let newSpeedY = bubble.speedY
+            const newX = bubble.x + bubble.speedX;
+            const newY = bubble.y + bubble.speedY;
+            let newSpeedX = bubble.speedX;
+            let newSpeedY = bubble.speedY;
 
             // Bounce off walls
             if (newX <= 0 || newX >= containerWidth - bubble.size) {
-              newSpeedX = -newSpeedX
+              newSpeedX = -newSpeedX;
             }
 
-            // Remove bubbles that go off the top
+            // If bubble goes off top, count as missed
             if (newY < -bubble.size) {
               missedBubbles++;
               return null;
             }
 
-            // Slight random movement
-            newSpeedX += (Math.random() - 0.5) * 0.1
-            newSpeedY += (Math.random() - 0.5) * 0.05
+            // Slight randomness
+            newSpeedX += (Math.random() - 0.5) * 0.1;
+            newSpeedY += (Math.random() - 0.5) * 0.05;
 
-            // Limit speed
-            newSpeedX = Math.max(-2, Math.min(2, newSpeedX))
-            newSpeedY = Math.max(-3, Math.min(-0.5, newSpeedY))
+            newSpeedX = Math.max(-2, Math.min(2, newSpeedX));
+            newSpeedY = Math.max(-3, Math.min(-0.5, newSpeedY));
 
             return {
               ...bubble,
@@ -99,23 +100,26 @@ export default function GameScreen({ onGameOver, onExit }) {
               y: newY,
               speedX: newSpeedX,
               speedY: newSpeedY,
-            }
+            };
           })
-          .filter(Boolean)
+          .filter(Boolean);
 
         if (missedBubbles > 0) {
-          setMissedCount((prev) => prev + missedBubbles)
-          setLives((prev) => prev - missedBubbles)
+          setMissedCount((prev) => prev + missedBubbles);
+          setLives((prev) => prev - missedBubbles);
         }
 
-        return updatedBubbles
-      })
-    }, 16) // ~60fps
+        return updatedBubbles;
+      });
 
-    console.log("Missed missedCount:", missedCount);
+      animationFrameId = requestAnimationFrame(updateBubbles);
+    };
 
-    return () => clearInterval(interval)
-  }, [])
+    animationFrameId = requestAnimationFrame(updateBubbles);
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, []);
+
 
   // Generate new bubbles periodically
   useEffect(() => {
