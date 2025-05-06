@@ -1,8 +1,13 @@
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 export default function Footer() {
   return (
-    <footer className="w-full mt-8 mb-4 text-center">
+    <motion.footer
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      className="w-full mt-8 mb-4 text-center">
       <div className="max-w-md mx-auto px-4">
         <div className="flex justify-center space-x-4 mb-3">
           <Link
@@ -64,6 +69,6 @@ export default function Footer() {
           </Link>
         </p>
       </div>
-    </footer>
+    </motion.footer>
   )
 }
