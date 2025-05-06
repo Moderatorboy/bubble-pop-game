@@ -24,7 +24,7 @@ export default function GameScreen({ onGameOver, onExit }) {
     const containerWidth = containerRef.current.offsetWidth
     const containerHeight = containerRef.current.offsetHeight
 
-    const size = Math.floor(Math.random() * 60) + 50 // 40-100px
+    const size = Math.floor(Math.random() * 60) + 50  // Size of bubble will be between 50 to 109
     const x = Math.floor(Math.random() * (containerWidth - size))
 
     const colors = [
@@ -107,10 +107,11 @@ export default function GameScreen({ onGameOver, onExit }) {
           })
           .filter(Boolean);
 
-        if (missedBubbles > 0) {
-          setMissedCount((prev) => prev + missedBubbles);
-          setLives((prev) => prev - missedBubbles);
-        }
+        // Will add some difficulty later like increase/decrease speed automatically after that I will uncomment this part
+        // if (missedBubbles > 0) {
+        //   setMissedCount((prev) => prev + missedBubbles);
+        //   setLives((prev) => prev - missedBubbles);
+        // }
 
         return updatedBubbles;
       });
@@ -133,12 +134,12 @@ export default function GameScreen({ onGameOver, onExit }) {
     return () => clearInterval(interval)
   }, [])
 
-  // Check for game over
-  useEffect(() => {
-    if (lives <= 0) {
-      onGameOver(score)
-    }
-  }, [lives, score, onGameOver])
+  // Commenting this part cuz this game will never ends. Will Uncomment this part after adding the difficulty logic
+  // useEffect(() => {
+  //   if (lives <= 0) {
+  //     onGameOver(score)
+  //   }
+  // }, [lives, score, onGameOver])
 
   return (
     <div
@@ -158,17 +159,17 @@ export default function GameScreen({ onGameOver, onExit }) {
 
       <div className="absolute top-4 right-4 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-md flex items-center space-x-4">
         <span className="font-semibold text-purple-700">Score: {score}</span>
-        <div className="flex items-center">
+        {/* <div className="flex items-center">
           <span className="font-semibold text-red-500">Lives: </span>
           <div className="flex ml-2">
             {lives > 0 && [...Array(lives)].map((_, i) => (
               <div key={i} className="w-3 h-3 rounded-full bg-red-500 mx-0.5"></div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
 
-      {missedCount > 0 && (
+      {/* {missedCount > 0 && (
         <motion.div
           className="absolute top-16 right-4 bg-red-500/80 text-white px-3 py-1 rounded-full text-sm"
           initial={{ opacity: 0, y: -10 }}
@@ -178,7 +179,7 @@ export default function GameScreen({ onGameOver, onExit }) {
         >
           Missed: {missedCount}
         </motion.div>
-      )}
+      )} */}
 
       <AnimatePresence>
         {bubbles.map((bubble) => (

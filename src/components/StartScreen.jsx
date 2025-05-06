@@ -65,8 +65,8 @@ export default function StartScreen({ onStart }) {
         </p>
         <ul className="text-left list-disc pl-5 space-y-1">
           <li>Tap bubbles to pop them</li>
-          <li>Don't miss more than 5 bubbles</li>
           <li>Try to get the highest score!</li>
+          <li>There’s no limit – just chill and enjoy popping!</li>
         </ul>
       </motion.div>
 
