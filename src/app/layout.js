@@ -1,9 +1,29 @@
 import "./globals.css"
 
 export const metadata = {
-  title: "Bubble Pop - Stress Relief Game",
-  description: "A fun bubble popping game to relieve stress",
-}
+  title: "Bubble Pop - Fun and Relaxing Stress Relief Game | Pop Bubbles & Relax",
+  description:
+    "A fun bubble popping game to relieve stress and clear your mind. Tap the bubbles to pop them and enjoy a relaxing experience.",
+  keywords:
+    "bubble pop game, stress relief game, pop bubbles, relax, fun game, bubble popping, stress relief, pop bubbles to relax, bubble pop game by anujbuilds, bubble pop game anuj chaudhary",
+  author: "Anuj Chaudhary",
+  robots: "index, follow",
+  openGraph: {
+    title: "Bubble Pop - Stress Relief Game",
+    description:
+      "A fun and relaxing bubble popping game to relieve stress. Enjoy popping bubbles and clearing your mind.",
+    url: "https://bubblepopgame.vercel.app/", // Live URL
+    image: "/bubbles.png", // Image for Open Graph
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image", // For a larger image in the tweet
+    title: "Bubble Pop - Stress Relief Game",
+    description:
+      "Pop bubbles and relax your mind with this fun and interactive stress-relief game.",
+    image: "/bubbles.png", // Image for Twitter Cards
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
