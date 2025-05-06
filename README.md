@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Bubble Pop Game 🫧
 
-## Getting Started
+A fun and interactive bubble-popping game built with Next.js! Test your reflexes and aim for the highest score while avoiding missing bubbles.
 
-First, run the development server:
+## 🔗 Live Demo
+[Click here to play the game](https://bubblepopgame.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📖 How to Play
+1. **Tap the bubbles** to pop them.
+2. **Don’t miss more than 5 bubbles** – missing bubbles will reduce your lives.
+3. Try to **get the highest score** by popping as many bubbles as you can.
+4. Game ends when you miss 5 bubbles.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Features
+- **Start Screen** with instructions and a "Start Popping" button.
+- Interactive gameplay with **bubble popping sound effects**.
+- Displays **lives left** and **current score** during the game.
+- **Game Over Screen** when 5 bubbles are missed.
+- Optimized for both **PC and mobile devices**.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Technologies Used
+- **Next.js** for UI development.
+- **Framer Motion** for smooth animations.
+- **Tailwind CSS** for responsive design.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📂 How to Use
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/bubble-pop-game.git
+   ```
+2. Navigate to the project folder:
+   ```bash
+   cd bubble-pop-game
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+5. Open `http://localhost:3000` in your browser to play the game.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Connect with Me
+- **Instagram**: [@anujbuilds](https://instagram.com/anujbuilds)
+- **YouTube**: [@anujbuilds](https://youtube.com/@anujbuilds)
+- **Twitter**: [@anujbuilds](https://twitter.com/anujbuilds)
+- **LinkedIn**: [Anuj Chaudhary](https://linkedin.com/in/anujchaudhary549)
