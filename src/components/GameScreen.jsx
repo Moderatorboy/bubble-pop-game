@@ -14,6 +14,9 @@ export default function GameScreen({ onGameOver, onExit }) {
   const containerRef = useRef(null)
   const { playSound } = useSound()
 
+  const isMobile = window.innerWidth <= 768;
+  const speedBoost = isMobile ? 2 : 1; // Boost speed on mobile
+
   // Generate a new bubble
   const generateBubble = () => {
     if (!containerRef.current) return
@@ -43,7 +46,7 @@ export default function GameScreen({ onGameOver, onExit }) {
       size,
       colorClass,
       speedX: (Math.random() - 0.5) * 1,
-      speedY: -Math.random() * 1.5 - 0.5, // Upward speed
+      speedY: (-Math.random() * 1.5 - 0.5) * speedBoost, // Upward speed
     }
 
     setBubbles((prevBubbles) => [...prevBubbles, newBubble])
