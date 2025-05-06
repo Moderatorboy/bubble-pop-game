@@ -3,7 +3,6 @@
 import { useRef, useCallback } from "react"
 
 export function useSound() {
-  const audioRef = useRef(null)
   const audioCache = useRef({})
 
   const playSound = useCallback((soundUrl) => {
@@ -11,7 +10,7 @@ export function useSound() {
       // Use cached audio if available
       if (!audioCache.current[soundUrl]) {
         audioCache.current[soundUrl] = new Audio(soundUrl)
-        audioCache.current[soundUrl].volume = 0.6
+        audioCache.current[soundUrl].volume = 0.8
       }
 
       // Clone the audio for overlapping sounds

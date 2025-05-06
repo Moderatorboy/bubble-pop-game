@@ -70,7 +70,7 @@ export default function GameScreen({ onGameOver, onExit }) {
       const containerHeight = containerRef.current.offsetHeight;
 
       setBubbles((prevBubbles) => {
-        let missedBubbles = 0;
+        // let missedBubbles = 0;
 
         const updatedBubbles = prevBubbles
           .map((bubble) => {
@@ -85,10 +85,10 @@ export default function GameScreen({ onGameOver, onExit }) {
             }
 
             // If bubble goes off top, count as missed
-            if (newY < -bubble.size) {
-              missedBubbles++;
-              return null;
-            }
+            // if (newY < -bubble.size) {
+            //   missedBubbles++;
+            //   return null;
+            // }
 
             // Slight randomness
             newSpeedX += (Math.random() - 0.5) * 0.1;
