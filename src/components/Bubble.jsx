@@ -18,7 +18,7 @@ export default function Bubble({ bubble, onPop }) {
         scale: 1.5,
         opacity: 0,
         filter: "blur(10px)",
-        transition: { duration: 0.3 },
+        transition: { duration: 0.1 },
       }}
       onClick={onPop}
       whileHover={{ scale: 1.1 }}
