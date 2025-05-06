@@ -9,8 +9,8 @@ import { X } from "lucide-react"
 export default function GameScreen({ onGameOver, onExit }) {
   const [bubbles, setBubbles] = useState([])
   const [score, setScore] = useState(0)
-  const [missedCount, setMissedCount] = useState(0)
-  const [lives, setLives] = useState(5)
+  // const [missedCount, setMissedCount] = useState(0)
+  // const [lives, setLives] = useState(5)
   const containerRef = useRef(null)
   const { playSound } = useSound()
 

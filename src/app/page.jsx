@@ -32,7 +32,7 @@ export default function Home() {
       <div className="flex-grow flex items-center justify-center w-full">
         {!gameStarted && !gameOver && <StartScreen onStart={() => setGameStarted(true)} />}
         {gameStarted && <GameScreen onGameOver={handleGameOver} onExit={handleExit} />}
-        {gameOver && <GameOverScreen score={finalScore} onPlayAgain={handlePlayAgain} onExit={handleExit} />}
+        {/* {gameOver && <GameOverScreen score={finalScore} onPlayAgain={handlePlayAgain} onExit={handleExit} />} */}
       </div>
       <Footer />
     </main>
