@@ -33,7 +33,7 @@ export default function Footer() {
         <p className="text-purple-700 font-medium bg-white/50 backdrop-blur-sm py-2 px-4 rounded-full inline-block">
           Made with <span className="text-red-500">❤️</span> by{" "}
           <Link
-            href="https://anujchaudhary.netlify.app/"
+            href="https://b2gpt.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold hover:text-purple-800 transition-colors"
