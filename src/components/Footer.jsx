@@ -32,8 +32,7 @@ export default function Footer() {
   href="https://youtube.com/@b2gpt"
   target="_blank"
   rel="noopener noreferrer"
-  className="bg-white p-2 rounded-full fill-red-600 hover:fill-red-700 transition-colors"
-  aria-label="YouTube"
+  className="bg-white p-2 rounded-full text-red-600 hover:text-red-700 transition-colors"
 >
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -44,8 +43,6 @@ export default function Footer() {
     <path d="M23.5 6.2a2.8 2.8 0 0 0-2-2c-1.8-.5-9.1-.5-9.1-.5s-7.3 0-9.1.5a2.8 2.8 0 0 0-2 2c-.5 1.8-.5 5.5-.5 5.5s0 3.7.5 5.5a2.8 2.8 0 0 0 2 2c1.8.5 9.1.5 9.1.5s7.3 0 9.1-.5a2.8 2.8 0 0 0 2-2c.5-1.8.5-5.5.5-5.5s0-3.7-.5-5.5ZM10 15.3V8.7l5.8 3.3L10 15.3Z" />
   </svg>
 </Link>
-
-
           <Link
             href="https://t.me/b2gpt"
             target="_blank"
