@@ -79,14 +79,14 @@ export default function Footer() {
   href="mailto:contactb2gpt@gmail.com"
   target="_blank"
   rel="noopener noreferrer"
-  className="bg-white/80 p-2 rounded-full fill-purple-600 hover:bg-white hover:fill-purple-700 transition-colors"
+  className="bg-white/80 p-2 rounded-full text-red-600 hover:bg-white hover:text-red-700 transition-colors"
   aria-label="Gmail"
 >
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 512 512"
     className="h-5 w-5"
-    fill="inherit"
+    fill="currentColor"
   >
     <path d="M502.3 190.8 327.4 338.1c-17.8 15.3-44.9 15.3-62.7 0L9.7 190.8C3.9 186.1 0 179 0 171.3V392c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V171.3c0 7.7-3.9 14.8-9.7 19.5zM464 120c-9.4 0-18.7 3.1-26.3 8.9L256 270.6 74.3 128.9C66.7 123.1 57.4 120 48 120c-26.5 0-48 21.5-48 48v16.4l224 192c17.8 15.3 44.9 15.3 62.7 0l224-192V168c0-26.5-21.5-48-48-48z"/>
   </svg>
