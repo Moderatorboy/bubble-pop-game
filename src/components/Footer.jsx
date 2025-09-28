@@ -60,6 +60,22 @@ export default function Footer() {
   </svg>
 </Link>
           <Link
+  href="https://b2gpt.vercel.app"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-white/80 p-2 rounded-full fill-blue-500 hover:bg-white hover:fill-blue-600 transition-colors"
+  aria-label="Website"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="h-5 w-5"
+    fill="inherit"
+  >
+    <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm0 16c-1.1 0-2-.9-2-2h4c0 1.1-.9 2-2 2zm8-8c0 1.1-.9 2-2 2V8c1.1 0 2 .9 2 2zm-16 0c0-1.1.9-2 2-2v4c-1.1 0-2-.9-2-2z"/>
+  </svg>
+</Link>
+          <Link
   href="https://t.me/b2gpt"
   target="_blank"
   rel="noopener noreferrer"
