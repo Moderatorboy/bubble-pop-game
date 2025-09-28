@@ -63,7 +63,7 @@ export default function Footer() {
   href="https://t.me/b2gpt"
   target="_blank"
   rel="noopener noreferrer"
-  className="bg-white/80 p-2 rounded-full fill-purple-600 hover:bg-white hover:fill-purple-700 transition-colors"
+  className="bg-white/80 p-2 rounded-full fill-blue-500 hover:bg-white hover:fill-blue-600 transition-colors"
   aria-label="Telegram"
 >
   <svg
@@ -72,7 +72,7 @@ export default function Footer() {
     className="h-5 w-5"
     fill="inherit"
   >
-    <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm116.5 168.9-36 169.5c-2.7 12.1-9.8 15.1-19.9 9.4l-55-40-26.5 25.5c-2.9 2.9-5.3 5.3-10.9 5.3l3.9-56.4 102.7-92.6c4.5-4.1-1-6.4-7-2.3l-127 80-54.8-17.1c-11.9-3.7-12.1-11.9 2.5-17.6l213.6-82.4c9.8-3.7 18.4 2.3 15.2 17.3z" />
+    <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm116.6 169.6l-40 188c-2.7 12.1-9.9 15.1-20 9.4l-55-40-26.5 25.4c-2.9 2.9-5.3 5.3-10.8 5.3l3.9-56.1 102.3-92.3c4.4-3.9-1-6-6.8-2.1l-126.4 79.6-54.4-17.1c-11.8-3.7-12-11.8 2.5-17.4l212.2-81.7c9.8-3.7 18.4 2.4 15.2 17.1z"/>
   </svg>
 </Link>
           <Link
