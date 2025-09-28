@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { motion } from "framer-motion"
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
@@ -7,18 +7,19 @@ export default function Footer() {
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      className="w-full mt-8 mb-4 text-center">
+      className="w-full mt-8 mb-4 text-center"
+    >
       <div className="max-w-md mx-auto px-4">
         <div className="flex justify-center space-x-4 mb-3">
-         <div class="socials">
-        <ul class="social-icons">
-          <li><a class="github" aria-label="GitHub" href="https://github.com/Moderatorboy" target="_blank"><i class="fab fa-github"></i></a></li>
-          <li><a class="telegram" aria-label="Telegram" href="https://t.me/b2gpt" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
-          <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/b2_gpt"><i class="fab fa-instagram" target="_blank"></i></a></li>
-          <li><a class="youtube" aria-label="Youtube" href="https://www.youtube.com/@B2GPT"><i class="fab fa-youtube" target="_blank"></i></a></li>
-          <li><a href="mailto:contactb2gpt@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a></li>
-        </ul>
-      </div>
+          <div className="socials">
+            <ul className="social-icons">
+              <li><a className="github" aria-label="GitHub" href="https://github.com/Moderatorboy" target="_blank"><i className="fab fa-github"></i></a></li>
+              <li><a className="telegram" aria-label="Telegram" href="https://t.me/b2gpt" target="_blank"><i className="fab fa-telegram-plane"></i></a></li>
+              <li><a className="instagram" aria-label="Instagram" href="https://www.instagram.com/b2_gpt" target="_blank"><i className="fab fa-instagram"></i></a></li>
+              <li><a className="youtube" aria-label="Youtube" href="https://www.youtube.com/@B2GPT" target="_blank"><i className="fab fa-youtube"></i></a></li>
+              <li><a href="mailto:contactb2gpt@gmail.com" aria-label="Mail"><i className="fas fa-envelope"></i></a></li>
+            </ul>
+          </div>
         </div>
 
         <p className="text-purple-700 font-medium bg-white/50 backdrop-blur-sm py-2 px-4 rounded-full inline-block">
@@ -34,5 +35,5 @@ export default function Footer() {
         </p>
       </div>
     </motion.footer>
-  )
+  );
 }
