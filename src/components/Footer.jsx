@@ -10,54 +10,20 @@ export default function Footer() {
       transition={{ duration: 0.5 }}
       className="w-full mt-8 mb-4 text-center bg-white/50 backdrop-blur-sm py-6"
     >
-      <div className="max-w-md mx-auto px-4">
-        {/* Social Icons */}
-        <div className="flex justify-center space-x-4 mb-4">
-          <a
-            href="https://github.com/Moderatorboy"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="text-gray-700 hover:text-gray-900 text-2xl"
-          >
-            <i className="fa-brands fa-github"></i>
-          </a>
-          <a
-            href="https://t.me/b2gpt"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Telegram"
-            className="text-blue-500 hover:text-blue-700 text-2xl"
-          >
-            <i className="fa-brands fa-telegram-plane"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/b2_gpt"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            className="text-pink-500 hover:text-pink-700 text-2xl"
-          >
-            <i className="fa-brands fa-instagram"></i>
-          </a>
-          <a
-            href="https://www.youtube.com/@B2GPT"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="YouTube"
-            className="text-red-600 hover:text-red-800 text-2xl"
-          >
-            <i className="fa-brands fa-youtube"></i>
-          </a>
-          <a
-            href="mailto:contactb2gpt@gmail.com"
-            aria-label="Mail"
-            className="text-gray-700 hover:text-gray-900 text-2xl"
-          >
-            <i className="fa-solid fa-envelope"></i>
-          </a>
-        </div>
-
+       <div class="socials">
+        <ul class="social-icons">
+          <li><a class="github" aria-label="GitHub" href="https://github.com/Moderatorboy" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a class="telegram" aria-label="Telegram" href="https://t.me/b2gpt" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
+          <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/b2_gpt"><i class="fab fa-instagram" target="_blank"></i></a></li>
+          <li><a class="youtube" aria-label="Youtube" href="https://www.youtube.com/@B2GPT"><i class="fab fa-youtube" target="_blank"></i></a></li>
+          <li><a href="mailto:contactb2gpt@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a></li>
+        </ul>
+      </div>
+    </div>
+<div class="image">
+    <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="">
+</div>
+           
         {/* Footer Text */}
         <p className="text-purple-700 font-medium inline-block">
           Made with <span className="text-red-500">❤️</span> by{" "}
